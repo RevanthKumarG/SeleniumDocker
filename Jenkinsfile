@@ -11,7 +11,7 @@ pipeline {
         stage('Build Image') {
             steps {
                 //sh
-                bat "docker build -t revanth/selenium-docker ."
+                bat "docker build -t revanth9/selenium-docker ."
             }
         }
         stage('Push Image') {
@@ -20,7 +20,7 @@ pipeline {
                     //sh
                     bat "docker logout"
 			        bat "docker login --username=${user} --password=${pass}"
-			        bat "docker push revanth/selenium-docker:latest"
+			        bat "docker push revanth9/selenium-docker:latest"
 			    }                           
             }
         }
