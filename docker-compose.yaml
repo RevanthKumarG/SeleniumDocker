@@ -23,7 +23,7 @@ services:
     volumes:
       - ./downloads:/home/seluser/Downloads  
   searchmodule:
-    image: selenium-docker:latest
+    image: revanth9/selenium-docker:latest
     depends_on:
       - chrome
       - firefox
@@ -34,7 +34,7 @@ services:
     volumes:
       - ./output/search-result:/usr/share/udemy/test-output
   bookflightmodule:
-    image: selenium-docker:latest
+    image: revanth9/selenium-docker:latest
     depends_on:
       - chrome
       - firefox
