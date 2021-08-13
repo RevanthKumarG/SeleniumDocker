@@ -19,8 +19,8 @@ pipeline {
 			    withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'pass', usernameVariable: 'user')]) {
                     //sh
                     bat "docker logout"
-			        bat "docker login --username=${user} --password=${pass} docker.io"
-			        bat "docker push revanth9/revanth/selenium-docker:latest"
+			        bat "docker login --username=${user} --password=${pass}"
+			        bat "docker push revanth/selenium-docker:latest"
 			    }                           
             }
         }
